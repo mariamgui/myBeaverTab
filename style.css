@@ -40,7 +40,7 @@ body {
 
 #container {
   /* compensates for translations and move things up a bit */
-  margin-top: 600px;
+  margin-top: 50%;
 }
 
 #quote {

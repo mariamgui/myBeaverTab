@@ -4,6 +4,7 @@
   //var currentDay = localStorage.getItem("storedCurrentDay");
   //setInterval(function(){ localStorage.clear(); }, 5000);
   var currentImage = localStorage.getItem("storedCurrentImage");
+  var currentQuote = localStorage.getItem("storedCurrentQuote");
   var quotes = [
  'You have brains in your head. You have feet in your shoes. You can steer yourself anay direction you choose _ DR. SEUSS _',
  'The only place where success comes before work is in the dictionary _ DONALD KENDALL _ ',
@@ -36,18 +37,29 @@
 
     var randomImage;
     if (currentImage == null){
-        //alert("if");
         randomImage = chooseOne(images);
         currentImage = randomImage;
         localStorage.setItem("storedCurrentImage",   currentImage );
     }
 
     else {
-        alert("else");
         randomImage = currentImage;
+        randomQuote = currentQuote;
     }
 
-    var randomQuote = chooseOne(quotes);
+    var randomQuote;
+    if (currentQuote == null){
+        randomQuote = chooseOne(quotes);
+        currentQuote = randomQuote;
+        localStorage.setItem("storedCurrentQuote",   currentQuote );
+    }
+
+    else {
+        randomImage = currentImage;
+        randomQuote = currentQuote;
+    }
+
+
 
     document.getElementById('background-image').style.backgroundImage = 'url("img/'+ randomImage +'")';
     document.getElementById('quote').innerHTML = randomQuote;
