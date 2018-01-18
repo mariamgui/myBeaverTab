@@ -8,7 +8,32 @@
   var quotes = [
  'You have brains in your head. You have feet in your shoes. You can steer yourself anay direction you choose _ DR. SEUSS _',
  'The only place where success comes before work is in the dictionary _ DONALD KENDALL _ ',
- 'We must believe that we are guifted for something, and that this thing, at whatever cost, must be attained. _MARIE CURIE_'
+ 'We must believe that we are guifted for something, and that this thing, at whatever cost, must be attained. _MARIE CURIE_',
+ 'Learning never exhausts the mind. _ Leonardo da Vinci _',
+ 'The only journey is the one within. _ Rainer Maria Rilke _',
+ 'Good judgment comes from experience, and a lot of that comes from bad judgment. _ Will Rogers _',
+'Think in the morning. Act in the noon. Eat in the evening. Sleep in the night. _ William Blake _',
+'No act of kindness, no matter how small, is ever wasted. _ Aesop _',
+'If you cannot do great things, do small things in a great way. _ Napoleon Hill _',
+'Permanence, perseverance and persistence in spite of all obstacles, discouragements, and impossibilities: It is this, that in all things distinguishes the strong soul from the weak. _ Thomas Carlyle _',
+'Keep your face always toward the sunshine - and shadows will fall behind you. _ Walt Whitman _',
+'Happiness can exist only in acceptance. _ George Orwell _',
+'The journey of a thousand miles begins with one step. _ Lao Tzu _',
+'There is only one corner of the universe you can be certain of improving, and that\'s your own self. _ Aldous Huxley _',
+'The best preparation for tomorrow is doing your best today. _ H. Jackson Brown, Jr _',
+'Ever tried. Ever failed. No matter. Try Again. Fail again. Fail better. _ Samuel Beckett _',
+'Change your life today. Don\'t gamble on the future, act now, without delay. _ Simone de Beauvoir _',
+'Not all those who wander are lost. _ J. R. R. Tolkien _',
+'Tell me and I forget. Teach me and I remember. Involve me and I learn. _ Benjamin Franklin _',
+'Very little is needed to make a happy life; it is all within yourself, in your way of thinking. _ Marcus Aurelius _',
+'If opportunity doesn\'t knock, build a door. _ Milton Berle _',
+'The secret of getting ahead is getting started. _ Mark Twain _',
+'A leader is one who knows the way, goes the way, and shows the way. John C. Maxwell',
+'Always remember that you are absolutely unique. Just like everyone else. _ Margaret Mead _',
+'When we are no longer able to change a situation - we are challenged to change ourselves. _ Viktor E. Frankl _',
+'What we achieve inwardly will change outer reality. _ Plutarch _',
+'All our dreams can come true, if we have the courage to pursue them. _ Walt Disney _',
+'We know what we are, but know not what we may be. _ William Shakespeare _'
     ];
 
   var images = [
