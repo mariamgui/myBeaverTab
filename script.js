@@ -1,4 +1,7 @@
+
+
 (function(){
+
   var date = new Date();
   var day = date.getDate();
   //var currentDay = localStorage.getItem("storedCurrentDay");
@@ -178,6 +181,5 @@
     document.getElementById('quote').className = 'move';
 
   };
-
 
 })();

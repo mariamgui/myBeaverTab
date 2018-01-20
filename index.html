@@ -10,6 +10,7 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="style.css">
+
   </head>
 
   <body class="centering-flex-box">
@@ -18,16 +19,14 @@
       <li><a href="http://oregonstate.edu/">OSUWebsite</a></li>
       <li><a href="https://myosu.oregonstate.edu/web/myosu/1">MyOSU</a></li>
       <li><a href="https://oregonstate.collegescheduler.com/entry">MySchedule</a></li>
-      <form class="navbar-form navbar-left"; position: absolute">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
     </ul>
-    <div id="background-image" class="overlay"></div>
-    <div id="container">
 
+    <div id="background-image" class="overlay"></div>
+    <div class="container" id = "time">
+
+    </div>
+
+    <div id="container" style = "z-index: 9999">
       <div id="quote">
         Beavers rock!. (Default)
       </div>
@@ -35,6 +34,7 @@
     </div>
 
     <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="time.js"></script>
   </body>
 
 </html>

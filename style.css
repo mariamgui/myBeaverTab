@@ -43,6 +43,18 @@ body {
   /* compensates for translations and move things up a bit */
   margin-top: 50%;
 }
+#time {
+  font-family: "Advent Pro, Times New Roman", "Times", "Georgia", "Helvetica";
+  position: absolute;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  letter-spacing: 1px;
+  line-height: 1.4em;
+  font-weight: 50;
+  font-size: 8em;
+
+}
 
 #quote {
   display: block;
@@ -114,5 +126,5 @@ li a:focus {
 }
 .resize {
     width: auto;
-    height: 24px;
+    height: 28px;
 }
