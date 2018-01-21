@@ -5,7 +5,7 @@
   var date = new Date();
   var day = date.getDate();
   //var currentDay = localStorage.getItem("storedCurrentDay");
-  //setInterval(function(){ localStorage.clear(); }, 5000);
+  //setInterval(function(){ localStorage.clear(); }, 1);
   var currentImage = localStorage.getItem("storedCurrentImage");
   var currentQuote = localStorage.getItem("storedCurrentQuote");
   var quotes = [
@@ -144,6 +144,7 @@
     if ( day != localStorage.getItem("storedCurrentDay") ){
       //alert('first if (date)');
         currentImage =null;
+        currentQuote=null;
       //  alert("current Image "+ currentImage);
         localStorage.setItem("storedCurrentDay",  day );
     }
