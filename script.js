@@ -4,7 +4,7 @@
 
   var date = new Date();
   var day = date.getDate();
-  //var currentDay = localStorage.getItem("storedCurrentDay");
+  var currentDay = localStorage.getItem("storedCurrentDay");
   //setInterval(function(){ localStorage.clear(); }, 1);
   var currentImage = localStorage.getItem("storedCurrentImage");
   var currentQuote = localStorage.getItem("storedCurrentQuote");
