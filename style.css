@@ -17,6 +17,11 @@ body {
 
 #background-image {
   /*background: url("img/1.jpg") no-repeat center center fixed;*/
+  -webkit-filter: blur(4px);
+  -moz-filter: blur(4px);
+  -o-filter: blur(4px);
+  -ms-filter: blur(4px);
+  filter: blur(4px); 
   background-repeat: no-repeat;
   background-size: cover;
 }
