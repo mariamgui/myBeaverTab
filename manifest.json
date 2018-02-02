@@ -1,10 +1,10 @@
 {
   "name": "myBeaverTab",
   "short_name": "myBeaverTab",
+  "manifest_version": 2,
   "version": "2.0",
   "description": "Custom Beaver chrome tab replacement for OSU student. Go Beavers!!",
-
-  "manifest_version": 2,
+  "content_security_policy":"script-src 'self' https://ajax.googleapis.com; object-src 'self'",
   "chrome_url_overrides": {
     "newtab": "index.html"
   }
