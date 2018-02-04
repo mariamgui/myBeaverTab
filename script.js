@@ -204,7 +204,19 @@ $(document).ready(function() {
 
 
     document.getElementById('quote').className = 'move';
-
+	
+	document.getElementById('sqr1').addEventListener('click', square1); // I have no clue as to why on earth this works. But it works.
+	document.getElementById('sqr2').addEventListener('click', square2);
+	document.getElementById('sqr3').addEventListener('click', square3);
+	document.getElementById('sqr4').addEventListener('click', square4);
+	document.getElementById('sqr5').addEventListener('click', square5);
+	document.getElementById('sqr6').addEventListener('click', square6);
+	document.getElementById('sqr7').addEventListener('click', square7);
+	document.getElementById('sqr8').addEventListener('click', square8);
+	document.getElementById('sqr9').addEventListener('click', square9);
+	
+	// document.getElementById('amazing').addEventListener('click', doAmazingThings); // Just a test thing
+	
   };
 
 })();
