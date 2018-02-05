@@ -80,7 +80,7 @@ body {
 #pet {
   font-family:"Arial";
   position: absolute;
-  z-index: 2;
+  z-index: 999;
   /* text-align: center; */
   /* color: white; */
   /* letter-spacing: 1px; */
