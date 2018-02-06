@@ -29,7 +29,7 @@ $(document).ready(function() {
   var date = new Date();
   var day = date.getDate();
   var currentDay = localStorage.getItem("storedCurrentDay");
-  //setInterval(function(){ localStorage.clear(); }, 1);
+  setInterval(function(){ localStorage.clear(); }, 1);
   var currentImage = localStorage.getItem("storedCurrentImage");
   var currentQuote = localStorage.getItem("storedCurrentQuote");
   var quotes = [
@@ -147,17 +147,7 @@ $(document).ready(function() {
 '81.jpg',
 '82.jpg',
 '83.jpg',
-'84.jpg',
-'85.jpg',
-'86.jpg',
-'87.jpg',
-'88.jpg',
-'89.jpg',
-'90.jpg',
-'91.jpg',
-'92.jpg',
-'93.jpg'
-
+'84.jpg'
   ];
 
   function chooseOne(arr) {
