@@ -93,6 +93,40 @@ body {
   width: 305px;
 }
 
+
+#events {
+  font-family:"garamond", "courier new",  "arial", sans-serif;
+  position: absolute;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  letter-spacing: 1px;
+  line-height: 1.4em;
+  font-weight: 100;
+  font-size: 1em;
+  top: 10%;
+  left: 3%;
+  height: 205px;
+  width: 300px;
+}
+
+.row {
+  height: 20px;
+  text-align: left;
+}
+
+.title {
+  font-family:"garamond", "courier new",  "arial", sans-serif;  
+  font-size: 1.2em;
+  color: orange;
+  letter-spacing: 1.5px;
+  align-content: left;
+}
+
+#feed {
+  font-family:"garamond", "courier new",  "arial", sans-serif;
+}
+
 #quote {
   display: block;
   letter-spacing: 1px;
