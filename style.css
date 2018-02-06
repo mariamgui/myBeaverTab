@@ -93,24 +93,6 @@ body {
   width: 305px;
 }
 
-#feed {
-  font-family:"garamond", "courier new",  "arial", sans-serif;
-  position: absolute;
-  z-index: 2;
-  text-align: center;
-  color: white;
-  letter-spacing: 1px;
-  line-height: 1.4em;
-  font-weight: 100;
-  font-size: 4em;
-  top: 9%;
-  left: 0%;
-  height: 205px;
-  width: 375px;
-
-}
-
-
 #quote {
   display: block;
   letter-spacing: 1px;
