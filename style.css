@@ -108,7 +108,7 @@ body {
 
 .row {
   text-align: left;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0,0,0,0.55);
   padding: 5px;
 }
 
@@ -122,6 +122,14 @@ body {
 
 .title:hover{
   text-decoration: underline;
+  color: rgb(220,68,5);
+}
+
+.title:active { 
+    background-color: orange;
+}
+
+.title:visited {  
   color: rgb(220,68,5);
 }
 
