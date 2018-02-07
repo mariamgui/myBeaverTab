@@ -57,7 +57,8 @@ function create_feed_row(feeds_list){
 		row = table.insertRow(-1);
 		row.innerHTML = "No events found!";
 		row.className = "row";
-	}
+	}	
+
 	for (i = 0; i < feeds_list.length && i < 10; i++) {		
 		let row = table.insertRow(-1);		
 		let start_time = double_digit_num(feeds_list[i]['start'].getHours()) + ':' + double_digit_num(feeds_list[i]['start'].getMinutes());
@@ -88,7 +89,20 @@ function parse_xml(xmlDOM){
 		if (end_time < today || start_time.getDate() > today.getDate() || start_time.getMonth() !== today.getMonth() || start_time.getFullYear() !== today.getFullYear())
 			{continue;}								
 		map.push({'title': title_str, 'description': description_str, 'link': link_str, 'start':start_time, 'end': end_time});
-	}	
+	}
+
+	map.sort(function(a, b){
+	    var startA = a['start'],
+	        startB = b['start'],
+	        endA = a['end'],
+	        endB = b['end'];	    
+	    if(startA < startB) return -1;
+	    if(startA > startB) return 1;
+	    if(endA < endB) return -1;
+	    if(endA > endB) return 1;	    
+	    return 0;	   	    
+	});	
+
 	return (map);
 }
 
