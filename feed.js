@@ -31,7 +31,7 @@ function double_digit_num(number) {
 		return number.toString();
 }
 
-function create_feed_row(feeds_list, max_num=10){
+function create_feed_row(feeds_list){
 	var table = document.getElementById("feed_table");	
 	if (feeds_list.length == 0) {
 		row = table.insertRow(-1);
@@ -39,12 +39,11 @@ function create_feed_row(feeds_list, max_num=10){
 		row.className = "row";
 	}	
 
-	for (i = 0, count = 0; i < feeds_list.length && count < max_num; i++) {		
+	for (i = 0; i < feeds_list.length; i++) {		
 		today = new Date()
 		if (feeds_list[i]['end'] < today) {		
 			continue;
-		}
-		count += 1;		
+		}		
 		let row = table.insertRow(-1);
 		let start_time = double_digit_num(feeds_list[i]['start'].getHours()) + ':' + double_digit_num(feeds_list[i]['start'].getMinutes());
 		let end_time = double_digit_num(feeds_list[i]['end'].getHours()) + ':' + double_digit_num(feeds_list[i]['end'].getMinutes());
