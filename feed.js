@@ -8,26 +8,6 @@ function rss_map_from_json(text){
     return obj;
 }
 
-function save_cache(rm){
-	var text = JSON.stringify(rm);
-	var today = new Date();	
-	chrome.storage.local.set({'rss_json': text, 'saved_date': today.toString()}, function() {
-          // Notify that we saved.
-          console.log('Settings saved');
-        });
-}
-
-function load_cache(callback){
-	var map = "";
-	var date = "";
-	chrome.storage.local.get(['rss_json', 'saved_date'], function(result){		
-		map = rss_map_from_json(result['rss_json']);
-		date = new Date(result['saved_date']);
-		callback(date, map);
-	});
-}
-
-
 function StringToXMLDom(string){
 	var xmlDoc=null;
 	if (window.DOMParser)
@@ -51,7 +31,7 @@ function double_digit_num(number) {
 		return number.toString();
 }
 
-function create_feed_row(feeds_list){
+function create_feed_row(feeds_list, max_num=10){
 	var table = document.getElementById("feed_table");	
 	if (feeds_list.length == 0) {
 		row = table.insertRow(-1);
@@ -59,8 +39,13 @@ function create_feed_row(feeds_list){
 		row.className = "row";
 	}	
 
-	for (i = 0; i < feeds_list.length && i < 10; i++) {		
-		let row = table.insertRow(-1);		
+	for (i = 0, count = 0; i < feeds_list.length && count < max_num; i++) {		
+		today = new Date()
+		if (feeds_list[i]['end'] < today) {		
+			continue;
+		}
+		count += 1;		
+		let row = table.insertRow(-1);
 		let start_time = double_digit_num(feeds_list[i]['start'].getHours()) + ':' + double_digit_num(feeds_list[i]['start'].getMinutes());
 		let end_time = double_digit_num(feeds_list[i]['end'].getHours()) + ':' + double_digit_num(feeds_list[i]['end'].getMinutes());
 		let time = start_time === end_time ? 'All day' : start_time + ' - ' + end_time;
@@ -74,8 +59,8 @@ function create_feed_row(feeds_list){
 
 function parse_xml(xmlDOM){
 	// let xmlDOM = StringToXMLDom(xmlText);
-	let items = xmlDOM.getElementsByTagName("item");
-	let today = new Date();
+	var items = xmlDOM.getElementsByTagName("item");
+	var today = new Date();
 	var map = [];
 	for (i = 0; i < items.length; i++) {
 		let title_str = items[i].childNodes[1].innerHTML;
@@ -111,7 +96,7 @@ function parse_feed(url){
 		qr = new XMLHttpRequest();
 		qr.onreadystatechange=function(){
 			if (this.readyState == 4 && this.status == 200) {
-				let xmlDOM = this.responseXML;
+				var xmlDOM = this.responseXML;
 				rss_map = parse_xml(xmlDOM);
 				save_cache(rss_map);
 				create_feed_row(rss_map);
@@ -126,21 +111,40 @@ function parse_feed(url){
 };
 
 
-function generate_events(saved_date, map){
-	if (saved_date == ""){
+function generate_events(cached_date, map){
+	if (cached_date == ""){
 		console.log('null');
 		rss_map = null;
 		return;
 	}
 	var today = new Date();
-	if (saved_date.getDate() != today.getDate() || saved_date.getMonth() != today.getMonth()) {
-		console.log('Mismatch date: '+ today + ' <> ' + saved_date)
+	if (cached_date.getDate() != today.getDate() || cached_date.getMonth() != today.getMonth()) {
+		console.log('Mismatch date: '+ today + ' <> ' + cached_date)
 		rss_map = null;
 	}
 	else {		
 		rss_map = map;		
 	}
 	parse_feed('http://calendar.oregonstate.edu/osu/rss20.xml');
+}
+
+function save_cache(rm){
+	var text = JSON.stringify(rm);
+	var today = new Date();	
+	chrome.storage.local.set({'rss_json': text, 'saved_date': today.toString()}, function() {
+          // Notify that we saved.
+          console.log('Settings saved');
+    	});
+}
+
+function load_cache(callback){
+	var map = "";
+	var date = "";
+	chrome.storage.local.get(['rss_json', 'saved_date'], function(result){		
+		map = rss_map_from_json(result['rss_json']);
+		date = new Date(result['saved_date']);
+		callback(date, map);
+	});
 }
 
 load_cache(generate_events);
