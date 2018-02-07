@@ -9,7 +9,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="feed.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="style.css">
     
@@ -21,10 +20,13 @@
 	</div>
   </div>
   <div id = "events">
-    <div><a class="title" href="http://calendar.oregonstate.edu/osu/">OSU EVENTS</a>
-      <hr/>
-    </div>
-    <table id="feed_table"></table>    
+    <table id="feed_table" width="100%">
+      <td class="row" style="padding: 5px">
+        <a class="title" target="_blank" href="http://calendar.oregonstate.edu/osu/">OSU EVENTS</a>
+        <hr/>
+      </td>
+      <script type="text/javascript" src="feed.js"></script>
+    </table>    
   </div>
   <div id = "pet">
 	<script src='game.js'></script>	
