@@ -104,6 +104,27 @@ body {
   height: 85%;
   color: white;
   text-align: left;
+  overflow: auto;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+width: 2px;
+height: 10px;
+}
+
+::-webkit-scrollbar-track {
+background: rgba(0,0,0,0.55);
+border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+border-radius: 10px;
+background: rgba(0,0,0,0);  
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: rgba(0,0,0,0.2);  
 }
 
 .row {
