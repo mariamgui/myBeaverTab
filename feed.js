@@ -14,12 +14,25 @@ function StringToXMLDom(string){
 	return xmlDoc;
 }
 
+function double_digit_num(number) {
+	if (number < 10)
+		return "0" + number;
+	else
+		return number.toString();
+}
+
 function create_feed_row(feeds_list){
-	for (i = 0; i < feeds_list.length; i++) {
-		var table = document.getElementById("feed_table");
+	var table = document.getElementById("feed_table");
+	if (feeds_list.length == 0) {
+		row = table.insertRow(-1);
+		row.innerHTML = "No events found!";
+		row.className = "row";
+	}
+
+	for (i = 0; i < feeds_list.length; i++) {		
 		let row = table.insertRow(-1);		
-		let start_time = feeds_list[i]['start'].getHours() + ':' + feeds_list[i]['start'].getMinutes();
-		let end_time = feeds_list[i]['end'].getHours() + ':' + feeds_list[i]['end'].getMinutes();
+		let start_time = double_digit_num(feeds_list[i]['start'].getHours()) + ':' + double_digit_num(feeds_list[i]['start'].getMinutes());
+		let end_time = double_digit_num(feeds_list[i]['end'].getHours()) + ':' + double_digit_num(feeds_list[i]['end'].getMinutes());
 		let time = start_time === end_time ? 'All day' : start_time + ' - ' + end_time;
 		const link = feeds_list[i]['link'];
 		const title = feeds_list[i]['title'];
