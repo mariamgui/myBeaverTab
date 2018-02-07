@@ -60,9 +60,7 @@ body {
   font-size: 9em;
 
 }
-#feed_table{
-  width: 100%
-}
+
 #weather {
   font-family:"garamond", "courier new",  "arial", sans-serif;
   position: absolute;
@@ -99,30 +97,27 @@ body {
 
 #events {  
   position: absolute;
-  z-index: 3;
-  text-align: left;
-  color: white;
-  letter-spacing: 1px;
-  line-height: 1.2em;
-  font-weight: 100;  
+  z-index: 3;  
   top: 10%;
   left: 2%;
   width: 22%;
   height: 85%;
+  color: white;
+  text-align: left;
 }
 
 .row {
   text-align: left;
-  background-color: rgba(0,0,0,0.5);
-  padding-bottom: 10px;  
+  background-color: rgba(0,0,0,0.6);
+  padding: 5px;
 }
 
 .title {
   font-family:"garamond", "courier new",  "arial", sans-serif;  
-  font-size: 1.2em;
+  font-size: 1.1em;
   color: rgb(220,68,5);
-  letter-spacing: 1.5px;
   align-content: left;
+  font-weight: bolder; 
 }
 
 .title:hover{
