@@ -88,13 +88,26 @@ body {
   /* line-height: 1.4em; */
   /* font-weight: 100; */
   font-size: 25px;
-  bottom: 0%;
-  left: 80%;
-  height: 40%;
-  width: 20%;
+  bottom: 4%;
+  left: 81%;
+  height: 31%;
+  width: 17%;
+  background-color: rgba(0,0,0,0.55);
 }
 
-
+#token{
+  position: absolute;
+  z-index: 2;
+  top: 82%;
+  left: 23%;
+  width: 54%;
+  height: 6%;
+  text-align: left;
+  overflow: auto;
+  background-color:  rgba(220,68,5,0.7);
+  padding-left: 11%;
+  border-radius: 14px;
+}
 #events {  
   position: absolute;
   z-index: 3;  
