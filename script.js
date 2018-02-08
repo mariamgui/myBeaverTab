@@ -1,5 +1,4 @@
 (function(){
- console.log("hello"); 
   var date = new Date();
   var day = date.getDate();
   var currentDay = localStorage.getItem("storedCurrentDay");
