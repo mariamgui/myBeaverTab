@@ -1,5 +1,4 @@
 (function(){
- console.log("hello"); 
   var date = new Date();
   var day = date.getDate();
   var currentDay = localStorage.getItem("storedCurrentDay");
@@ -7,9 +6,9 @@
   var currentImage = localStorage.getItem("storedCurrentImage");
   var currentQuote = localStorage.getItem("storedCurrentQuote");
   var quotes = [
- 'You have brains in your head. You have feet in your shoes. You can steer yourself anay direction you choose _ DR. SEUSS _',
- 'The only place where success comes before work is in the dictionary _ DONALD KENDALL _ ',
- 'We must believe that we are guifted for something, and that this thing, at whatever cost, must be attained. _MARIE CURIE_',
+ 'You have brains in your head. You have feet in your shoes. You can steer yourself any direction you choose _ Dr. Seuss _',
+ 'The only place where success comes before work is in the dictionary _ Donald Kendall _ ',
+ 'We must believe that we are guifted for something, and that this thing, at whatever cost, must be attained. _Marie Curie_',
  'Learning never exhausts the mind. _ Leonardo da Vinci _',
  'The only journey is the one within. _ Rainer Maria Rilke _',
  'Good judgment comes from experience, and a lot of that comes from bad judgment. _ Will Rogers _',
