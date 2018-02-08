@@ -78,21 +78,27 @@ body {
 
 }
 
-#pet {
-  font-family:"Arial";
+#game-section {
   position: absolute;
   z-index: 3;
-  /* text-align: center; */
-  /* color: white; */
-  /* letter-spacing: 1px; */
-  /* line-height: 1.4em; */
-  /* font-weight: 100; */
-  font-size: 25px;
-  bottom: 4%;
+  top: 55%;
+  bottom: 40%;
   left: 81%;
-  height: 31%;
-  width: 17%;
-  background-color: rgba(0,0,0,0.55);
+  height: 28%;
+  width: 16%;
+  border-top: 2px solid rgba(0, 0, 0, .5);
+  border-bottom: 2px solid rgba(0, 0, 0, .5);
+  border-left: 2px solid rgba(0, 0, 0, .5);
+  border-right: 2px solid rgba(0, 0, 0, .5);
+}
+
+#game {
+  position: relative;  
+  font-family:"Arial";
+  font-size: 25px;
+  left: 10%;
+  width: 80%;
+  top: 10%;
 }
 
 #token{
