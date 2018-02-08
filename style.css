@@ -84,7 +84,7 @@ body {
   top: 55%;
   bottom: 40%;
   left: 81%;
-  height: 28%;
+  height: 35%;
   width: 16%;
   border-top: 2px solid rgba(0, 0, 0, .5);
   border-bottom: 2px solid rgba(0, 0, 0, .5);
@@ -102,17 +102,11 @@ body {
 }
 
 #token{
+  color: rgba(220,68,5,0.7);
+  font-family:comic sans ms;  
   position: absolute;
-  z-index: 2;
-  top: 82%;
-  left: 23%;
-  width: 54%;
-  height: 6%;
-  text-align: left;
-  overflow: auto;
-  background-color:  rgba(220,68,5,0.7);
-  padding-left: 11%;
-  border-radius: 14px;
+  right: 35%;
+  font-weight:bold"
 }
 #events {  
   position: absolute;
