@@ -229,6 +229,9 @@ background-color: rgba(0,0,0,0.60);
 }
 
 #game {
+  height: 90%; 
+  width: 100%; 
+  position: absolute; 
   font-family:"Arial";
   font-size: 25px;
   
@@ -282,6 +285,13 @@ li a:focus {
     text-decoration: none;
 }
 .resize {
-    width: auto;
-    height: 28px;
+  position: absolute;
+  top: -157%;
+  top: -156%;
+  left: 0%;
+}
+.marginshift{
+  margin-left: 8%;
+  list-style: none; 
+
 }
