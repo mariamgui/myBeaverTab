@@ -15,57 +15,67 @@
   </head>
 
 <body>  
-  <div id = "weather" style="float: right;"> 
-	<div style="margin: 20px 0 0 0"><!-- weather widget start --><a target="_blank" href="http://www.booked.net/weather/corvallis-3581"><img src="https://w.bookcdn.com/weather/picture/1_3581_0_1_ababab_187_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=124&domid=w209&anc_id=21311"  alt="booked.net"/></a><!-- weather widget end -->
-	</div>
-  </div>
-  <div id = "events">
-    <table id="feed_table" width="100%">
-      <td class="row" style="padding: 5px">
-        <a class="title" target="_blank" href="http://calendar.oregonstate.edu/osu/">UPCOMING EVENTS</a>
-        <hr/>
-      </td>
-      <script type="text/javascript" src="feed.js"></script>
-    </table>    
-  </div>
-  <div id = "game-section">
-	<div id = "game">
-		<h4 style = "color: white">Play Me!</h4>
-		<script src='game.js'></script>	
-		<form name="tic" method="post">
-		<input type="button" id="sqr1" class="tictac" value="     ">
-		<input type="button" id="sqr2" class="tictac" value="     ">
-		<input type="button" id="sqr3" class="tictac" value="     "><br />
-		<input type="button" id="sqr4" class="tictac" value="     ">
-		<input type="button" id="sqr5" class="tictac" value="     ">
-		<input type="button" id="sqr6" class="tictac" value="     "><br />
-		<input type="button" id="sqr7" class="tictac" value="     ">
-		<input type="button" id="sqr8" class="tictac" value="     ">
-		<input type="button" id="sqr9" class="tictac" value="     ">
-		</form>
-	</div>
-  </div>
-  <div class="centering-flex-box">
+ <div id="background-image" class="overlay"></div>
+<div>
+ <nav class="navbar navbar-fixed-top navbar-inverse bg-inverse">
     <ul style="z-index:2">
-      <li><a href="#" class="navbar-left"><img  class="resize"></a></li>
-      <li><a href="http://oregonstate.edu/">OSUWebsite</a></li>
-      <li><a href="https://myosu.oregonstate.edu/web/myosu/1">MyOSU</a></li>
-      <li><a href="https://oregonstate.collegescheduler.com/entry">MySchedule</a></li>
-      <li><a id = "token" href="https://prometheus.eecs.oregonstate.edu/token?asid=8541941785389115">If you like our plugin help us by clicking here and generating a token! </a></li>
+        <li><a href="#" class="navbar-left"><img  class="resize"></a></li>
+        <li><a href="http://oregonstate.edu/">OSUWebsite</a></li>
+        <li><a href="https://myosu.oregonstate.edu/web/myosu/1">MyOSU</a></li>
+        <li><a href="https://oregonstate.collegescheduler.com/entry">MySchedule</a></li>
+        <li id= "token"><a href="https://prometheus.eecs.oregonstate.edu/token?asid=8541941785389115">If you like our plugin help us by CLIKING HERE and generating a TOKEN! </a></li>
     </ul>
-    
-    <div id="background-image" class="overlay"></div>
-    <div class="container" id = "time">
-    </div>
-  
-    <div id="container" style = "z-index: 2">
-      <div id="quote">
-        Beavers rock!. (Default)
-      </div>
-    </div>
-
-  </div> 
+ </nav>
 </div>
+
+ <div id= "right">
+  <div id = "weather" style="float: right;"> 
+	  <div ><!-- weather widget start --><a target="_blank" href="http://www.booked.net/weather/corvallis-3581"><img src="https://w.bookcdn.com/weather/picture/1_3581_0_1_ababab_187_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=124&domid=w209&anc_id=21311"  alt="booked.net"/></a><!-- weather widget end -->
+  	</div>
+  </div>
+
+  <div id = "game-section">
+      <div id = "game">
+          <h4 style = "color: white">Play Me!</h4>
+          <script src='game.js'></script>	
+          <form name="tic" method="post">
+          <input type="button" id="sqr1" class="tictac" value="     ">
+          <input type="button" id="sqr2" class="tictac" value="     ">
+          <input type="button" id="sqr3" class="tictac" value="     "><br />
+          <input type="button" id="sqr4" class="tictac" value="     ">
+          <input type="button" id="sqr5" class="tictac" value="     ">
+          <input type="button" id="sqr6" class="tictac" value="     "><br />
+          <input type="button" id="sqr7" class="tictac" value="     ">
+          <input type="button" id="sqr8" class="tictac" value="     ">
+          <input type="button" id="sqr9" class="tictac" value="     ">
+          </form>
+        </div>
+  </div>
+
+</div>
+  <div id = "middle">
+    <div id = "time"></div>
+  </div>
+
+  <div id= "bottom"  >
+      <div id="quote">Beavers rock!. (Default)</div>
+  </div>
+
+  <div id= "left">
+    <div id = "events">
+        <table id="feed_table" width="100%">
+          <td class="row" style="padding: 5px">
+            <a class="title" target="_blank" href="http://calendar.oregonstate.edu/osu/">UPCOMING EVENTS</a>
+            <hr/>
+          </td>
+          <script type="text/javascript" src="feed.js"></script>
+        </table>    
+    </div>
+  </div>
+
+
+
+
 <script type="text/javascript" src="script.js"></script>
 <script type="text/javascript" src="time.js"></script>
 </body>
