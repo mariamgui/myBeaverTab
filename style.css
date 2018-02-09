@@ -229,9 +229,7 @@ background-color: rgba(0,0,0,0.60);
 }
 
 #game {
-  height: 90%; 
-  width: 100%; 
-  position: absolute; 
+  
   font-family:"Arial";
   font-size: 25px;
   
