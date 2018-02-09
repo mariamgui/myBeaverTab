@@ -11,6 +11,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="style.css">
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     
   </head>
 
@@ -35,21 +36,23 @@
   </div>
 
   <div id = "game-section">
-      <div id = "game">
-          <h4 style = "color: white">Play Me!</h4>
-          <script src='game.js'></script>	
-          <form name="tic" method="post">
-          <input type="button" id="sqr1" class="tictac" value="     ">
-          <input type="button" id="sqr2" class="tictac" value="     ">
-          <input type="button" id="sqr3" class="tictac" value="     "><br />
-          <input type="button" id="sqr4" class="tictac" value="     ">
-          <input type="button" id="sqr5" class="tictac" value="     ">
-          <input type="button" id="sqr6" class="tictac" value="     "><br />
-          <input type="button" id="sqr7" class="tictac" value="     ">
-          <input type="button" id="sqr8" class="tictac" value="     ">
-          <input type="button" id="sqr9" class="tictac" value="     ">
-          </form>
-        </div>
+	<div class = "blur">
+	</div>
+	<div id = "game" class = "center">
+	  <h4 style = "color: white">Play Me!</h4>
+	  <script src='game.js'></script>	
+	  <form name="tic" method="post">
+	  <input type="button" id="sqr1" class="tictac" value="     ">
+	  <input type="button" id="sqr2" class="tictac" value="     ">
+	  <input type="button" id="sqr3" class="tictac" value="     "><br />
+	  <input type="button" id="sqr4" class="tictac" value="     ">
+	  <input type="button" id="sqr5" class="tictac" value="     ">
+	  <input type="button" id="sqr6" class="tictac" value="     "><br />
+	  <input type="button" id="sqr7" class="tictac" value="     ">
+	  <input type="button" id="sqr8" class="tictac" value="     ">
+	  <input type="button" id="sqr9" class="tictac" value="     ">
+	  </form>
+    </div>
   </div>
 
 </div>
