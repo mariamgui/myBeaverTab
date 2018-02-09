@@ -194,7 +194,7 @@ background: rgba(0,0,0,0.3);
 
 #game-section {
   position: absolute;
-  bottom: 0%;
+  top: 70%;
   right: 5%;
   height: 36%;
   width: 55%;
@@ -216,7 +216,7 @@ background: rgba(0,0,0,0.3);
 }	 
 
 .center {
-  position: relative;
+  position: absolute;
   margin: auto;
   top: 15%;
   bottom: 0;
