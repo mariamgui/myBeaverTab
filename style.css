@@ -95,11 +95,17 @@ background: rgba(0,0,0,0);
 background: rgba(0,0,0,0.3);  
 }
 
-.row {
+.feedCell {
   text-align: left;
   background-color: rgba(0,0,0,0.75);
-  margin-left: 5%;
-  padding-left: 5%;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.feedCell:hover{
+background-color: rgba(0,0,0,0.60);
 }
 
 .title {
