@@ -194,9 +194,9 @@ background: rgba(0,0,0,0.3);
 
 #game-section {
   position: absolute;
-  top: 70%;
+  bottom: 0%;
   right: 5%;
-  height: 36%;
+  height: 50%;
   width: 55%;
   border-top: 2px solid rgba(255, 255, 255, .5);
   border-bottom: 2px solid rgba(255, 255, 255, .5);
