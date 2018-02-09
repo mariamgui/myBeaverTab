@@ -98,7 +98,8 @@ background: rgba(0,0,0,0.3);
 .row {
   text-align: left;
   background-color: rgba(0,0,0,0.75);
-  padding: 5px;
+  margin-left: 5%;
+  padding-left: 5%;
 }
 
 .title {
