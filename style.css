@@ -197,18 +197,35 @@ background: rgba(0,0,0,0.3);
   position: absolute;
   bottom: 0%;
   right: 5%;
-  height: 43%;
-  width: 70%;
-  border-top: 2px solid rgba(0, 0, 0, .5);
-  border-bottom: 2px solid rgba(0, 0, 0, .5);
-  border-left: 2px solid rgba(0, 0, 0, .5);
-  border-right: 2px solid rgba(0, 0, 0, .5);
+  height: 36%;
+  width: 55%;
+  border-top: 2px solid rgba(255, 255, 255, .5);
+  border-bottom: 2px solid rgba(255, 255, 255, .5);
+  border-left: 2px solid rgba(255, 255, 255, .5);
+  border-right: 2px solid rgba(255, 255, 255, .5);
 }
-#game {
+
+.blur {
   position: absolute;
-  height: 88%;
-  width: 70%;
-  left: 15%;
+  height: 100%;
+  width: 100%;	
+  background: linear-gradient(#073,#0fa);
+  overflow: hidden;
+  filter: blur(13px);
+  filter: opacity(15%);
+  position: absolute;
+}	 
+
+.center {
+  position: relative;
+  margin: auto;
+  top: 15%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#game {
   font-family:"Arial";
   font-size: 25px;
   
