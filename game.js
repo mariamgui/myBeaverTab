@@ -8,7 +8,7 @@ For this and over 400+ free scripts, visit http://javascriptkit.com
 //if IE4/NS6, apply style
 if (document.all||document.getElementById){
 document.write('<style>.tictac{')
-document.write('width:50px;height:50px;')
+document.write('width:20%;height:20%;')
 document.write('}</style>')
 }
 
