@@ -303,47 +303,47 @@ function check()
 {
   if(sqr1 == " X " && sqr2 == " X " && sqr3 == " X ")
   {
-    alert("You Win!")
+    swal("Woohoo! You won!", "Keep going!", "success");
     reset()
   } 
   else if(sqr4 == " X " && sqr5 == " X " && sqr6 == " X ")
   {
-    alert("You Win!")
+    swal("Woohoo! You won!", "Keep going!", "success");
     reset()
   } 
   else if(sqr7 == " X " && sqr8 == " X " && sqr9 == " X ")
   {
-    alert("You Win!")
+    swal("Woohoo! You won!", "Keep going!", "success");
     reset()
   }
   else if(sqr1 == " X " && sqr5 == " X " && sqr9 == " X ")
   {
-    alert("You Win!")
+    swal("Woohoo! You won!", "Keep going!", "success");
     reset()
   }
   else if(sqr1 == " X " && sqr4 == " X " && sqr7 == " X ")
   {
-    alert("You Win!")
+	swal("Woohoo! You won!", "Keep going!", "success");
     reset()
   }
   else if(sqr2 == " X " && sqr5 == " X " && sqr8 == " X ")
   {
-    alert("You Win!")
+    swal("Woohoo! You won!", "Keep going!", "success");
     reset()
   }
   else if(sqr3 == " X " && sqr6 == " X " && sqr9 == " X ")
   {
-    alert("You Win!")
+    swal("Woohoo! You won!", "Keep going!", "success");
     reset()
   }
   else if(sqr1 == " X " && sqr5 == " X " && sqr9 == " X ")
   {
-    alert("You Win!")
+    swal("Woohoo! You won!", "Keep going!", "success");
     reset()
   }
   else if(sqr3 == " X " && sqr5 == " X " && sqr7 == " X ")
   {
-    alert("You Win!")
+    swal("Woohoo! You won!", "Keep going!", "success");
     reset()
   }
   else
@@ -360,47 +360,47 @@ function check2()
   drawCheck()
   if(sqr1 == " O " && sqr2 == " O " && sqr3 == " O ")
   {
-    alert("You Lose!")
+    swal("Aww, you lost.", "Don't worry. Try again!", "error");
     reset()
   } 
   else if(sqr4 == " O " && sqr5 == " O " && sqr6 == " O ")
   {
-    alert("You Lose!")
+    swal("Aww, you lost.", "Don't worry. Try again!", "error");
     reset()
   } 
   else if(sqr7 == " O " && sqr8 == " O " && sqr9 == " O ")
   {
-    alert("You Lose!")
+    swal("Aww, you lost.", "Don't worry. Try again!", "error");
     reset()
   }
   else if(sqr1 == " O " && sqr5 == " O " && sqr9 == " O ")
   {
-    alert("You Lose!")
+    swal("Aww, you lost.", "Don't worry. Try again!", "error");
     reset()
   }
   else if(sqr1 == " O " && sqr4 == " O " && sqr7 == " O ")
   {
-    alert("You Lose!")
+    swal("Aww, you lost.", "Don't worry. Try again!", "error");
     reset()
   }
   else if(sqr2 == " O " && sqr5 == " O " && sqr8 == " O ")
   {
-    alert("You Lose!")
+    swal("Aww, you lost.", "Don't worry. Try again!", "error");
     reset()
   }
   else if(sqr3 == " O " && sqr6 == " O " && sqr9 == " O ")
   {
-    alert("You Lose!")
+    swal("Aww, you lost.", "Don't worry. Try again!", "error");
     reset()
   }
   else if(sqr1 == " O " && sqr5 == " O " && sqr9 == " O ")
   {
-    alert("You Lose!")
+    swal("Aww, you lost.", "Don't worry. Try again!", "error");
     reset()
   }
   else if(sqr3 == " O " && sqr5 == " O " && sqr7 == " O ")
   {
-    alert("You Lose!")
+    swal("Aww, you lost.", "Don't worry. Try again!", "error");
     reset()
   }
 }
@@ -517,7 +517,7 @@ function drawCheck()
   if(moveCount == 9)
   {
     reset()
-    alert("Draw") 
+    swal("Welp, it's a draw.", "Try again. You can make it!", "info"); 
   }
 }
 
