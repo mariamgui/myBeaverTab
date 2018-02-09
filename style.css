@@ -196,7 +196,7 @@ background: rgba(0,0,0,0.3);
   position: absolute;
   bottom: 0%;
   right: 5%;
-  height: 45%;
+  height: 40%;
   width: 55%;
   border-top: 2px solid rgba(255, 255, 255, .5);
   border-bottom: 2px solid rgba(255, 255, 255, .5);
@@ -219,9 +219,6 @@ background: rgba(0,0,0,0.3);
   position: relative;
   margin: auto;
   top: 10%;
-  bottom: 0;
-  left: 0;
-  right: 0;
 }
 
 #game {
