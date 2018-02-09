@@ -1,4 +1,4 @@
-function rss_map_from_json(text){
+	function rss_map_from_json(text){
 	if (text == "" || text ==   null) {return ""}
 	var obj = JSON.parse(text, function (key, value) {
     if (key == "start" || key=="end") {
@@ -46,14 +46,15 @@ function create_feed_row(feeds_list){
 			continue;
 		}		
 		let row = table.insertRow(-1);
+		let cell = row.insertCell();
 		let start_time = double_digit_num(feeds_list[i]['start'].getHours()) + ':' + double_digit_num(feeds_list[i]['start'].getMinutes());
 		let end_time = double_digit_num(feeds_list[i]['end'].getHours()) + ':' + double_digit_num(feeds_list[i]['end'].getMinutes());
 		let time = start_time === end_time ? 'All day' : start_time + ' - ' + end_time;
 		const link = feeds_list[i]['link'];
 		const title = feeds_list[i]['title'];
 		// row.innerHTML = '<a href= \"${link}\"> ${title}</a>' + '<br/>' + start_time + ' - ' + end_time;
-		row.innerHTML = '<a class = \"title\" target=\"_blank\" href=\"'+ link + '\">'+title+'</a>' + '<br/>' + time;
-		row.className = "row";
+		cell.innerHTML = '<a class = \"title\" target=\"_blank\" href=\"'+ link + '\">'+title+'</a>' + '<br/>' + time;
+		cell.className = "feedCell";
 	}
 }
 
