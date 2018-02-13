@@ -54,6 +54,7 @@ body {
   right:25%
 }
 #time {
+  text-shadow: 6px 4px 2px #333;
   position:absolute; 
   font-family:"garamond", "courier new",  "arial", sans-serif;
   text-align: center;
