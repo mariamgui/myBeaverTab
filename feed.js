@@ -1,4 +1,4 @@
-	function rss_map_from_json(text){
+function rss_map_from_json(text){
 	if (text == "" || text ==   null) {return ""}
 	var obj = JSON.parse(text, function (key, value) {
     if (key == "start" || key=="end") {
@@ -53,7 +53,7 @@ function create_feed_row(feeds_list){
 		const link = feeds_list[i]['link'];
 		const title = feeds_list[i]['title'];
 		// row.innerHTML = '<a href= \"${link}\"> ${title}</a>' + '<br/>' + start_time + ' - ' + end_time;
-		cell.innerHTML = '<a class = \"title\" target=\"_blank\" href=\"'+ link + '\">'+title+'</a>' + '<br/>' + time;
+		cell.innerHTML = '<a target=\"_blank\" href=\"'+ link + '\">'+ '<p class = \"title\">' + title + '</p>' + '<p style="color: white;">'+ time + '</p>'+'</a>';
 		cell.className = "feedCell";
 	}
 }
