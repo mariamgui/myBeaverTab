@@ -2,7 +2,7 @@
   "name": "myBeaverTab",
   "short_name": "myBeaverTab",
   "manifest_version": 2,
-  "version": "2.0",
+  "version": "1.2",
   
   "description": "Custom Beaver chrome tab replacement for OSU student. Go Beavers!!",
   "content_security_policy":"script-src 'self' https://unpkg.com https://maxcdn.bootstrapcdn.com https://ajax.googleapis.com; object-src 'self'",
