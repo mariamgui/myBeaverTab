@@ -1,10 +1,10 @@
 ﻿function convert_text_to_map(text, conversion_func){
-	if (text == "" || text ==   null) {return ""}
-	var obj = JSON.parse(text, conversion_func);
+	if (text == "" || text == null) {return null;}	
+	var obj = JSON.parse(text, conversion_func);	
     return obj;
 }
 
-function save_map_in_cache(rm, id_str){}
+function save_map_in_cache(rm, id_str){
 	var json_str = JSON.stringify(rm);
 	var today = new Date();	
 	chrome.storage.local.set({id_str: json_str, 'date': today.toString()}, function() {
@@ -13,32 +13,35 @@ function save_map_in_cache(rm, id_str){}
     	});
 }
 
-function fetch_xml(url, xml_map_list, create_map_func, apply_func){
-	if (xml_map_list == null) {
-		qr = new XMLHttpRequest();
-		qr.onreadystatechange=function(){
-			if (this.readyState == 4 && this.status == 200) {
-				var xmlDOM = this.responseXML;
-				xml_map_list = create_map_func(xmlDOM);
-				save_map_in_cache(xml_map_list, url);
-				apply_func(xml_map_list);
-			}
+function fetch_xml_and_parse(url, parse_DOM_func, main_func){
+	qr = new XMLHttpRequest();
+	qr.onreadystatechange=function(){
+		if (this.readyState == 4 && this.status == 200) {
+			var xmlDOM = this.responseXML;
+			var xml_map_list = parse_DOM_func(xmlDOM);			
+			save_map_in_cache(xml_map_list, make_id_str_from(url));
+			main_func(xml_map_list);
 		}
-		qr.open('get', url);
-		qr.send();
 	}
-	else {		
-		apply_func(xml_map_list);
-	}
+	qr.open('get', url);
+	qr.send();
 };
 
+function make_id_str_from(url){return url;}
 
-function load_map_from_cache(main_func, cache_id_str, conversion_func){
-	var map = "";
-	var date = "";
+function load_cache_begin(url, validate_cache_func, conversion_func, parse_DOM_func, main_func){
+	var xml_map_list;
+	var date;
+	id_str = make_id_str_from(url);	
 	chrome.storage.local.get([id_str, 'date'], function(result){
-		map = convert_text_to_map(result[cache_id_str], conversion_func);
+		xml_map_list = convert_text_to_map(result[id_str], conversion_func);	
 		date = new Date(result['date']);
-		main_func(date, map);
+		valid = validate_cache_func(date, xml_map_list);		
+		if (!valid){
+			fetch_xml_and_parse(url, parse_DOM_func, main_func);
+		}
+		else{			
+			main_func(xml_map_list);
+		}
 	});
 }
