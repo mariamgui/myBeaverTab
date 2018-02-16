@@ -204,12 +204,16 @@ font-weight: bolder;
   position: absolute;
   bottom: 0%;
   right: 5%;
-  height: 40%;
-  width: 55%;
+  height: auto;
+  width: auto;
   border-top: 2px solid rgba(255, 255, 255, .5);
   border-bottom: 2px solid rgba(255, 255, 255, .5);
   border-left: 2px solid rgba(255, 255, 255, .5);
   border-right: 2px solid rgba(255, 255, 255, .5);
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 15%;
+  padding-bottom:20%;
 }
 
 .blur {
@@ -220,7 +224,8 @@ font-weight: bolder;
   overflow: hidden;
   filter: blur(13px);
   filter: opacity(15%);
-  position: absolute;
+  right:0%;
+  top: 0%;
 }	 
 
 .center {
@@ -230,11 +235,17 @@ font-weight: bolder;
 }
 
 #game {
-  
   font-family:"Arial";
-  font-size: 150%;
+  height:auto;
+  width:auto;
   
 }
+
+input.tictac{
+	height:45px;
+	width:45px;
+}
+
 #photoCredit{
   font-style:italic; 
   font-family: "comic sans ms", "Garamond", "Arial"; 
