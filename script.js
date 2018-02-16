@@ -1,4 +1,7 @@
 (function(){
+  document.getElementById('tokenphotochange').onclick = function() {
+    setInterval(function(){ localStorage.clear(); }, 1);
+  };
   var date = new Date();
   var day = date.getDate();
   var currentDay = localStorage.getItem("storedCurrentDay");
