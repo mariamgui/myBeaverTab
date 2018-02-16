@@ -6,11 +6,11 @@ For this and over 400+ free scripts, visit http://javascriptkit.com
 */
 
 //if IE4/NS6, apply style
-if (document.all||document.getElementById){
-document.write('<style>.tictac{')
-document.write('width:25%;height:25%;')
-document.write('}</style>')
-}
+// if (document.all||document.getElementById){
+// document.write('<style>.tictac{')
+// document.write('width:25px;height:25px;')
+// document.write('}</style>')
+// }
 
 var sqr1
 var sqr2
