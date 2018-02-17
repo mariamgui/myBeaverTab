@@ -54,7 +54,7 @@ body {
   right:25%
 }
 #time {
-  text-shadow: 6px 4px 2px #333;
+  text-shadow: 2px 4px 2px #333;
   position:absolute; 
   font-family:"garamond", "courier new",  "arial", sans-serif;
   text-align: center;
@@ -150,6 +150,7 @@ font-weight: bolder;
  
 }
 #quote {
+  text-shadow: 2px 4px 2px #333;
   letter-spacing: 1px;
   line-height: 1.4em;
   font-weight: 300;
@@ -206,10 +207,6 @@ font-weight: bolder;
   right: 5%;
   height: auto;
   width: auto;
-  border-top: 2px solid rgba(255, 255, 255, .5);
-  border-bottom: 2px solid rgba(255, 255, 255, .5);
-  border-left: 2px solid rgba(255, 255, 255, .5);
-  border-right: 2px solid rgba(255, 255, 255, .5);
   padding-left: 5%;
   padding-right: 5%;
   padding-top: 15%;
@@ -220,7 +217,7 @@ font-weight: bolder;
   position: absolute;
   height: 100%;
   width: 100%;	
-  background: linear-gradient(#073,#0fa);
+  background: rgba(0,0,0,1);
   overflow: hidden;
   filter: blur(13px);
   filter: opacity(15%);
