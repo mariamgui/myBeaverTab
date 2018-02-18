@@ -14,6 +14,7 @@
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<!-- Load cache functions -->
 	<script type="text/javascript" src="connections.js"></script>
+  <script type="text/javascript" src="weather.js"></script>
     
   </head>
 
@@ -28,8 +29,15 @@
         <li><a href="https://oregonstate.instructure.com/">Canvas</a></li>
         <li><a href="https://apps.ideal-logic.com/osusli">OSU Clubs</a></li> 
         <li id= "token"><a id = "tokenphotochange"style="color:rgb(220,68,5);" href="https://prometheus.eecs.oregonstate.edu/token?asid=8541941785389115">Feel like changing the background?! CLICK HERE!</a></li>
-        <li> <a style="color:white" href = "https://oregonstate.app.box.com/s/6f7lo8kgqp1ugvldszruzt17c8h4ujpx/folder/20210239609">Photo credit: Oregon State University</a></li>
+        <li> <a style="color:white" href = "https://oregonstate.app.box.com/s/6f7lo8kgqp1ugvldszruzt17c8h4ujpx/folder/20210239609">Photo credit: Oregon State University</a></li>        
       </ul>
+    <div style="color: white; position: absolute; right: 2%;">
+      <ul style="z-index:2" class = "marginshift">
+        <li id="temperature" style="font-size: 1em;">temp</li>
+        <li id="update_time" style="font-size: 1em;">time</li>
+        <li id="weather" style="font-size: 1em; ">weather</li>              
+      </ul>              
+    </div>    
  </nav>
 </div>
 
