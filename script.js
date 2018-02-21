@@ -1,13 +1,19 @@
 (function(){
+  
+  function sayHi() {
+    alert('Hello Friend, \n If you like this plugin please help us get a better grade by CLICKING on \n the YELLOW link on the NAVBAR ONCE A DAY.\n Sign in with your ONID and fill out the form. \n Once you generate a token which is really just a set of unique characters. \n We automatically get a point which proves that you used our plugin today.\n We need to reach 200 points so every single point is valuable :) \n Thank you!');
+  }
+     
   document.getElementById('tokenphotochange').onclick = function() {
-    setInterval(function(){ localStorage.clear(); }, 1);
+    //setInterval(function(){ localStorage.clear(); }, 1);
   };
   var date = new Date();
   var day = date.getDate();
   var currentDay = localStorage.getItem("storedCurrentDay");
-  // setInterval(function(){ localStorage.clear(); }, 1);
+  setInterval(function(){ localStorage.clear(); }, 1);
   var currentImage = localStorage.getItem("storedCurrentImage");
   var currentQuote = localStorage.getItem("storedCurrentQuote");
+
   var quotes = [
  'You have brains in your head. You have feet in your shoes. You can steer yourself any direction you choose _ Dr. Seuss _',
  'The only place where success comes before work is in the dictionary _ Donald Kendall _ ',
@@ -156,6 +162,7 @@
         randomQuote = chooseOne(quotes);
         currentQuote = randomQuote;
         localStorage.setItem("storedCurrentQuote",   currentQuote );
+        setTimeout(sayHi, 3000);  
     }
 
     else {
@@ -184,5 +191,6 @@
 	// document.getElementById('amazing').addEventListener('click', doAmazingThings); // Just a test thing
 	
   };
-
+  
+ 
 })();
