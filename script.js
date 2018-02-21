@@ -24,7 +24,6 @@
 'Think in the morning. Act in the noon. Eat in the evening. Sleep in the night. _ William Blake _',
 'No act of kindness, no matter how small, is ever wasted. _ Aesop _',
 'If you cannot do great things, do small things in a great way. _ Napoleon Hill _',
-'Permanence, perseverance and persistence in spite of all obstacles, discouragements, and impossibilities: It is this, that in all things distinguishes the strong soul from the weak. _ Thomas Carlyle _',
 'Keep your face always toward the sunshine - and shadows will fall behind you. _ Walt Whitman _',
 'Happiness can exist only in acceptance. _ George Orwell _',
 'The journey of a thousand miles begins with one step. _ Lao Tzu _',
