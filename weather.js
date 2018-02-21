@@ -83,7 +83,8 @@ function get_weather_image(w){
 
 function show_weather(weather_data){
 	console.log("saved data: ", weather_data);	
-	document.getElementById("temperature").innerHTML = weather_data['temp_f'];
+	temp_f = document.getElementById("temperature")
+	temp_f.innerHTML = parseInt(weather_data['temp_f'])+" &#8457;";
 	document.getElementById("weather").innerHTML = get_weather_image(weather_data['weather']);
 	console.log("Weather data for: " + weather_data['update_time']);
 }
