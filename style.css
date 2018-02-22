@@ -200,6 +200,14 @@ font-weight: bolder;
   top: 12%;
 }
 
+.wicon {  
+  position: absolute;
+  display: block;
+  top: -157%;
+  top: -156%;
+  left: 0%;
+}
+
 
 #game-section {
   position: absolute;
