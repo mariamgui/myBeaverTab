@@ -42,9 +42,16 @@ function create_feed_row(feeds_list){
 
 	for (i = 0; i < feeds_list.length; i++) {		
 		today = new Date()
-		if (feeds_list[i]['end'] < today) {		
-			continue;
-		}		
+		
+		let et = feeds_list[i]['end'];
+		let ehr = et.getHours();
+		let emin = et.getMinutes();
+		if (et<today) {continue;}
+		if (ehr!=0 && emin!=0){
+			if (ehr<today.getHours()) {continue;}
+			if (ehr==today.getHours() && emin<today.getMinutes()) {continue;}
+		}
+
 		let row = table.insertRow(-1);
 		let cell = row.insertCell();
 		let start_time = double_digit_num(feeds_list[i]['start'].getHours()) + ':' + double_digit_num(feeds_list[i]['start'].getMinutes());
@@ -71,7 +78,7 @@ function parse_xml(xmlDOM){
 		let dtend_str = items[i].childNodes[9].innerHTML;
 		let allday_str = items[i].childNodes[11].innerHTML;
 		let end_time = new Date(dtend_str);
-		let start_time = new Date(dtstart_str);				
+		let start_time = new Date(dtstart_str);		
 		if (end_time < today || start_time.getDate() > today.getDate() || start_time.getMonth() !== today.getMonth() || start_time.getFullYear() !== today.getFullYear())
 			{continue;}								
 		map.push({'title': title_str, 'description': description_str, 'link': link_str, 'start':start_time, 'end': end_time});
