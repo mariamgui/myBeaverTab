@@ -77,6 +77,7 @@ function get_weather_image(w){
 	var w_type = standardize_text(w);
 	var icon_name = weather_inv_map[w_type][1];
 	return "<img src =\"./wic/"+ icon_name + "\" class =\"wicon\">";
+	// return "<img class =\"wicon\" src= \"./wic/"+ icon_name +"<svg></svg>\">";
 }
 
 function show_weather(weather_data){

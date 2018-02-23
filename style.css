@@ -202,9 +202,9 @@ font-weight: bolder;
 
 .wicon {  
   position: absolute;
-  display: block;
-  
+  display: block;  
   left: 136%;
+  filter: invert(1) sepia(1) brightness(8);
 }
 
 
