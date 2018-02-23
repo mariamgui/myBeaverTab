@@ -204,6 +204,8 @@ font-weight: bolder;
   position: absolute;
   display: block;  
   left: 137%;
+  top: -157%;
+  top: -156%;
   filter: invert(1) sepia(1) brightness(8);
 }
 
