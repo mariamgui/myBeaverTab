@@ -200,7 +200,10 @@ font-weight: bolder;
   top: 12%;
 }
 
-.wicon {    
+.wicon {
+  float: right;  
+  height: 100%; 
+  width: auto;
   display: block;  
   filter: invert(1) sepia(1) brightness(8);
 }
