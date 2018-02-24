@@ -200,12 +200,8 @@ font-weight: bolder;
   top: 12%;
 }
 
-.wicon {  
-  position: absolute;
+.wicon {    
   display: block;  
-  left: 137%;
-  top: -157%;
-  top: -156%;
   filter: invert(1) sepia(1) brightness(8);
 }
 
