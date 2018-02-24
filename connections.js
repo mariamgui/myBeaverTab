@@ -1,4 +1,8 @@
-﻿function convert_text_to_map(text, conversion_func){
+﻿/**
+ * @author Abtin Khodadadi <abt.kod@gmail.com>
+ */
+
+function convert_text_to_map(text, conversion_func){
 	if (text == "" || text == null) {return null;}	
 	var obj = JSON.parse(text, conversion_func);	
     return obj;

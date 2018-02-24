@@ -1,3 +1,7 @@
+/**
+ * @author Abtin Khodadadi <abt.kod@gmail.com>
+ */
+
 function build_weather_codes(){
 	console.log("building weather codes.");
 	weather_inv_map = {};

@@ -1,3 +1,7 @@
+/**
+ * @author Abtin Khodadadi <abt.kod@gmail.com>
+ */
+
 function rss_map_from_json(text){
 	if (text == "" || text ==   null) {return ""}
 	var obj = JSON.parse(text, function (key, value) {
