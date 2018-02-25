@@ -61,10 +61,9 @@ function parse_weather_xmlDOM(xmlDOM){
 
 function validate_weather_cache(cached_date, map){
 	if (map == null){return false;}
-
 	var today = new Date();
 	var update_time = map["update_time"]
-	if ((today-update_time)/(1000*60*60) > 20) {return false;}
+	if ((today-update_time)/(1000*60) > 20 && (today-cached_date)/(1000*60) > 1) {return false;}
 	else {return true;}	
 }
 
@@ -93,10 +92,13 @@ function get_weather_image(w){
 }
 
 function show_weather(weather_data){
-	console.log("saved data: ", weather_data);	
-	temp_f = document.getElementById("temperature")	
-	temp_f.innerHTML = "<span title=\""+ parseInt(weather_data['temp_c']) + "&#8451;\">" + parseInt(weather_data['temp_f'])+" &#8457;</span>";
-	document.getElementById("weather").innerHTML = "<span title=\""+ weather_data['weather'] +"\">" + get_weather_image(weather_data['weather']) + "</span>";
+	console.log("saved data: ", weather_data);
+	var temperature = document.getElementById("temperature");
+	var temp_c = Math.round(parseFloat((weather_data['temp_c'])));
+	var temp_f = Math.round(parseFloat((weather_data['temp_f'])));
+	var w_type = weather_data['weather'];
+	temperature.innerHTML = "<span title=\""+ temp_c + "&#8451;\">" + temp_f +" &#8457;</span>";
+	document.getElementById("weather").innerHTML = "<span title=\""+ w_type +"\">" + get_weather_image(w_type) + "</span>";
 	console.log("Weather data for: " + weather_data['update_time']);
 }
 
