@@ -5,7 +5,7 @@
   }
      
   document.getElementById('tokenphotochange').onclick = function() {
-    //setInterval(function(){ localStorage.clear(); }, 1);
+    // setInterval(function(){ localStorage.clear(); }, 1);
   };
   var date = new Date();
   var day = date.getDate();
@@ -161,7 +161,7 @@
         randomQuote = chooseOne(quotes);
         currentQuote = randomQuote;
         localStorage.setItem("storedCurrentQuote",   currentQuote );
-        setTimeout(sayHi, 3000);  
+        // setTimeout(sayHi, 3000);  
     }
 
     else {
