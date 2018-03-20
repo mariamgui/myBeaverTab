@@ -241,7 +241,7 @@ font-weight: bolder;
 }
 
 #game {
-  font-family:"Arial";
+  font-family:"garamond", "courier new",  "arial", sans-serif;
   height:auto;
   width:auto;
   
@@ -258,6 +258,7 @@ input.tictac{
 	border-color:rgb(220,68,5);
 	border-radius:7px;
 	background: white;
+	font-family: 'Arial';
 	font-size: 20px;
 	color :rgb(220,68,5);
 }
